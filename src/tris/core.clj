@@ -1,5 +1,6 @@
 (ns tris.core
-  (:gen-class))
+  (:gen-class)
+  (:require tris.action))
 
 ;; TODO use config file
 (defn get_params
@@ -15,7 +16,7 @@
 (defn run
   "run things"
   [params]
-  nil)
+  (tris.action/prepare_and_run params))
 
 (defn -main
   "get args and run things"
