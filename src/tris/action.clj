@@ -2,6 +2,11 @@
   (:require tris.source)
   (:require tris.plate))
 
+(defn show_results
+  ""
+  [plate params]
+  (println plate))
+
 (defn run
   "action!"
   [plate src1 src2 params]
