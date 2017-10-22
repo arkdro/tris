@@ -23,3 +23,9 @@
   [plate]
   0)
 
+(defn get_consumed_sizes
+  "Return size of consumed parts of the plate"
+  [plate]
+  [(inc (get_total_size))
+   (inc (get_total_size))])
+
