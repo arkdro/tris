@@ -15,7 +15,13 @@
 (defn run
   "action!"
   [plate src1 src2 params]
-  )
+  (if (definitely_done? plate)
+    (show_results plate params)
+    (let [
+          new_plate (tris.plate/update_plate plate src1)
+          ]
+      ;; flip the sources for the next step
+      (recur new_plate src2 src1 params))))
 
 (defn prepare_and_run
   "prepare plate and sources, and run the whole action"
