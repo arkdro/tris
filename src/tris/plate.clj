@@ -18,3 +18,8 @@
   [plate source]
   plate)
 
+(defn get_total_size
+  "Return the total size of the plate"
+  [plate]
+  0)
+
