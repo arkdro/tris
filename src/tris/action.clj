@@ -7,6 +7,13 @@
   [plate params]
   (println plate))
 
+(defn calc_limit
+  "Calculate the bigger half"
+  [n]
+  (if (even? n)
+    (inc (/ n 2))
+    (/ (inc n) 2)))
+
 (defn definitely_done?
   "Check if the plate is consumed"
   [plate]
