@@ -13,3 +13,8 @@
   (build_one_point point_range)
   [width height point_range])
 
+(defn update_plate
+  "Update a place using a source of input"
+  [plate source]
+  plate)
+
