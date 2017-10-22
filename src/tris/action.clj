@@ -17,7 +17,12 @@
 (defn definitely_done?
   "Check if the plate is consumed"
   [plate]
-  )
+  (let [
+        total (tris.plate/get_total_size plate)
+        used (tris.plate/get_consumed_sizes plate)
+        limit (calc_limit total)
+        ]
+    (some #(>= % limit) used)))
 
 (defn run
   "action!"
