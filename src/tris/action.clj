@@ -7,6 +7,11 @@
   [plate params]
   (println plate))
 
+(defn definitely_done?
+  "Check if the plate is consumed"
+  [plate]
+  )
+
 (defn run
   "action!"
   [plate src1 src2 params]
