@@ -33,6 +33,14 @@
   [width point_range]
   (vec (repeatedly width #(build_one_point point_range))))
 
+(defn make_different_starts
+  "Make sure that two starting points are different"
+  [point_range width height data]
+  (let [cur1 (get_point_in_data 0 0 width height data)
+        cur2 (get_point_in_data (dec width) (dec height) width height data)]
+    (if (points_equal? cur1 cur2)
+      (let [new_point (mod (inc cur1) point_range)] ; might give some edge to one side
+        (set_point_in_data 0 0 new_point data)))))
 
 (defn build_plate
   "Build a plate filled with grains"
