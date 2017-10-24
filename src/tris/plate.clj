@@ -15,6 +15,14 @@
   [x y point data]
   (assoc-in data [y x] point))
 
+(defn get_point
+  "Get a point of a plate at the specified place"
+  [x y
+   {width :width
+    height :height
+    data :data}]
+  (get_point_in_data x y width height data))
+
 (defn build_one_point
   "Build one point"
   [point_range]
