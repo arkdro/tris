@@ -10,6 +10,11 @@
   [x y width height data]
   (get-in data [y x]))
 
+(defn set_point_in_data
+  "Set a point of a plate"
+  [x y point data]
+  (assoc-in data [y x] point))
+
 (defn build_one_point
   "Build one point"
   [point_range]
