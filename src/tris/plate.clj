@@ -1,5 +1,10 @@
 (ns tris.plate)
 
+(defn points_equal?
+  "Check if two points are equal"
+  [p1 p2]
+  (= p1 p2))
+
 (defn build_one_point
   "Build one point"
   [point_range]
