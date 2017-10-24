@@ -26,7 +26,8 @@
 (defn build_one_point
   "Build one point"
   [point_range]
-  3)
+  (rand-int point_range))
+
 
 (defn build_plate
   "Build a plate filled with grains"
