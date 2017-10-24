@@ -5,6 +5,11 @@
   [p1 p2]
   (= p1 p2))
 
+(defn get_point_in_data
+  "Get a point of a raw data at the specified place"
+  [x y width height data]
+  (get-in data [y x]))
+
 (defn build_one_point
   "Build one point"
   [point_range]
