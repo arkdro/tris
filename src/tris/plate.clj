@@ -47,8 +47,19 @@
   [{width :width
     height :height
     point_range :point_range}]
-  (build_one_point point_range)
-  [width height point_range])
+  (let [data (doall (vec (repeatedly height #(build_one_line width point_range))))
+        data2 (make_different_starts point_range width height data)
+        cur1 (get_point_in_data 0 0 width height data)
+        cur2 (get_point_in_data (dec width) (dec height) width height data)]
+    {:width width
+     :height height
+     :point_range point_range
+     :total_size (* width height)
+     :size1 1
+     :size2 1
+     :cur1 cur1
+     :cur2 cur2
+     :data data}))
 
 (defn update_plate
   "Update a place using a source of input"
