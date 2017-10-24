@@ -28,6 +28,11 @@
   [point_range]
   (rand-int point_range))
 
+(defn build_one_line
+  "Build one line"
+  [width point_range]
+  (vec (repeatedly width #(build_one_point point_range))))
+
 
 (defn build_plate
   "Build a plate filled with grains"
